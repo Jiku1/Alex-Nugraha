@@ -3,12 +3,7 @@ layout: default
 title: About
 ---
 
-# {{ site.data.cv.name }}
+# Tentang Saya
 
-<img src="{{ '/assets/img/profile.jpg' | relative_url }}" alt="Profile" class="profile">
-
-{{ site.data.cv.bio }}
-
-## Kontak
-- Email: {{ site.data.cv.email }}
-- GitHub: <a href="{{ site.data.cv.github }}">{{ site.data.cv.github }}</a>
+Mahasiswa S2 dengan fokus pada **Machine Learning** dan **Analisis Data**.  
+Tertarik pada integrasi antara kecerdasan buatan dan sains data untuk pemecahan masalah nyata.

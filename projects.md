@@ -3,7 +3,7 @@ layout: default
 title: Projects
 ---
 
-# {{ site.data.lang[site.lang].projects_heading | default: "Projects" }}
+# {{ site.data.lang[site.lang].projects_heading }}
 
 <ul class="project-list">
   {% for project in site.data.projects %}

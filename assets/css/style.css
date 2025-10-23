@@ -1,83 +1,120 @@
-:root{
-  --bg-light: #f8f7f4;
-  --text-light: #1f2937;
-  --muted: #6b7280;
-  --accent: #9ca3af;
-  --bg-dark: #0b1220;
-  --text-dark: #e6eef8;
-  --max-w: 1100px;
-  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+::root {
+  --bg: #f9fafb;
+  --text: #1f2937;
+  --accent: #2563eb;
+  --nav-bg: #ffffff;
+  --border: #e5e7eb;
 }
 
-*{box-sizing:border-box}
-body{margin:0;transition:background 0.2s,color 0.2s}
-.wrap{max-width:var(--max-w);margin:30px auto;padding:18px}
-
-.site-header{display:flex;justify-content:space-between;align-items:center;padding:12px 18px}
-.brand-link{font-weight:700;text-decoration:none}
-.main-nav a{margin:0 10px;text-decoration:none;color:inherit}
-
-.header-controls{display:flex;gap:8px;align-items:center;margin-left:12px}
-
-.profile{width:108px;border-radius:10px;float:right;margin-left:16px}
-
-/* content */
-.content{background:transparent;padding:12px}
-.project-list{list-style:none;padding:0;margin:0}
-.project-card{border-radius:10px;padding:14px;margin-bottom:14px;border:1px solid rgba(0,0,0,0.06)}
-
-/* footer */
-.site-footer{text-align:center;padding:18px;margin-top:30px;color:var(--muted)}
-
-/* dark mode default (prefers) */
-@media (prefers-color-scheme: dark) {
-  body{background:var(--bg-dark);color:var(--text-dark)}
-  .site-header,.site-footer{background:rgba(255,255,255,0.03)}
-  .project-card{border:1px solid rgba(255,255,255,0.04)}
+body.dark {
+  --bg: #111827;
+  --text: #e5e7eb;
+  --accent: #3b82f6;
+  --nav-bg: #1f2937;
+  --border: #374151;
 }
 
-/* light */
-@media (prefers-color-scheme: light) {
-  body{background:var(--bg-light);color:var(--text-light)}
-  .site-header,.site-footer{background:rgba(0,0,0,0.02)}
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
 }
 
-/* manual override via .theme-dark or .theme-light on <html> */
-html.theme-dark body{background:var(--bg-dark);color:var(--text-dark)}
-html.theme-dark .site-header,.theme-dark .site-footer{background:rgba(255,255,255,0.03)}
-html.theme-light body{background:var(--bg-light);color:var(--text-light)}
-
-/* responsive */
-@media (max-width:800px){
-  .main-nav{display:none}
-  .header-controls select{display:none}
-  .profile{width:84px}
+/* Navbar */
+.navbar {
+  background: var(--nav-bg);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-
-/* styling untuk hero section di homepage */
-.hero {
-  background: rgba(0, 0, 0, 0.03);
-  border-radius: 12px;
-  padding: 40px;
-  text-align: center;
-  margin-bottom: 40px;
+.navbar .container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.hero h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+.logo {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2rem;
 }
 
-.hero p {
-  color: var(--muted);
-  max-width: 700px;
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  margin: 0 0.75rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.controls select, .controls button {
+  background: var(--nav-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.3rem 0.5rem;
+  cursor: pointer;
+  color: var(--text);
+}
+
+/* Content */
+.container {
+  max-width: 900px;
   margin: 0 auto;
 }
 
-/* biar tulisan enak dibaca di mode terang maupun gelap */
-html.theme-dark .hero {
-  background: rgba(255, 255, 255, 0.05);
+.page-content {
+  margin: 2rem auto;
+  line-height: 1.7;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 1.5rem;
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
+  color: var(--text);
+}
+
+/* Project Cards */
+.project-list {
+  list-style: none;
+  padding: 0;
+}
+
+.project-card {
+  background: var(--nav-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  transition: transform 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+}
+
+.project-card h3 {
+  margin: 0 0 0.5rem 0;
 }
 
 /* ==== CV PAGE ==== */

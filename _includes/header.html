@@ -1,25 +1,15 @@
-<header class="site-header">
-  <div class="header-inner">
-    <div class="brand">
-      <a class="brand-link" href="{{ '/' | relative_url }}">{{ site.title | default: "Alex Nugraha Setia" }}</a>
-    </div>
+<header class="navbar">
+  <div class="container">
+    <a href="{{ '/' | relative_url }}" class="logo">{{ site.title }}</a>
 
-    <nav class="main-nav">
-      <a href="{{ '/' | relative_url }}">
-        {{ site.data.lang[site.lang].nav_home | default: "Home" }}
-      </a>
-      <a href="{{ '/projects.html' | relative_url }}">
-        {{ site.data.lang[site.lang].nav_projects | default: "Projects" }}
-      </a>
-      <a href="{{ '/cv.html' | relative_url }}">
-        {{ site.data.lang[site.lang].nav_cv | default: "CV" }}
-      </a>
-      <a href="{{ '/about.html' | relative_url }}">
-        {{ site.data.lang[site.lang].nav_about | default: "About" }}
-      </a>
+    <nav class="nav-links">
+      <a href="{{ '/' | relative_url }}">{{ site.data.lang[site.lang].nav_home }}</a>
+      <a href="{{ '/projects.html' | relative_url }}">{{ site.data.lang[site.lang].nav_projects }}</a>
+      <a href="{{ '/cv.html' | relative_url }}">{{ site.data.lang[site.lang].nav_cv }}</a>
+      <a href="{{ '/about.html' | relative_url }}">{{ site.data.lang[site.lang].nav_about }}</a>
     </nav>
 
-    <div class="header-controls">
+    <div class="controls">
       <select id="lang-switch" aria-label="Language switch">
         <option value="id">ID</option>
         <option value="en">EN</option>
@@ -30,31 +20,18 @@
 </header>
 
 <script>
-// --- language switch ---
-const langSel = document.getElementById('lang-switch');
-if (langSel) {
-  const current = localStorage.getItem('site_lang') || '{{ site.default_lang }}';
-  langSel.value = current;
-  langSel.addEventListener('change', e => {
-    localStorage.setItem('site_lang', e.target.value);
-    document.cookie = 'site_lang=' + e.target.value + '; path=/';
-    location.reload();
-  });
-}
+const langSelect = document.getElementById('lang-switch');
+langSelect.value = localStorage.getItem('site_lang') || '{{ site.default_lang }}';
+langSelect.addEventListener('change', e => {
+  localStorage.setItem('site_lang', e.target.value);
+  document.cookie = 'site_lang=' + e.target.value + '; path=/';
+  location.reload();
+});
 
-// --- dark mode toggle ---
-const themeToggle = document.getElementById('theme-toggle');
-if (themeToggle) {
-  themeToggle.addEventListener('click', () => {
-    const html = document.documentElement;
-    const current = html.classList.contains('theme-dark') ? 'theme-dark' : 'theme-light';
-    const next = current === 'theme-dark' ? 'theme-light' : 'theme-dark';
-    html.classList.remove(current);
-    html.classList.add(next);
-    localStorage.setItem('theme', next);
-  });
-
-  const saved = localStorage.getItem('theme');
-  if (saved) document.documentElement.classList.add(saved);
-}
+const themeButton = document.getElementById('theme-toggle');
+themeButton.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+  localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+});
+if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark');
 </script>
