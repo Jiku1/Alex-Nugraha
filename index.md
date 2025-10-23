@@ -1,5 +1,3 @@
-{% include header.html %}
-
 ---
 layout: default
 title: Home
