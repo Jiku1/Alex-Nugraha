@@ -1,7 +1,11 @@
-title: "DataUnpam-style Site"
-description: "Situs Data Computer Vision"
+title: "DataUAB-style Site"
+description: "Situs data & proyek berbasis Jekyll"
 theme: minima
 markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+
+author:
+  name: "Nama Kamu"
+  email: "email@domain.com"
