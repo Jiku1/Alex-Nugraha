@@ -13,7 +13,7 @@ Saya memiliki ketertarikan mendalam pada **machine learning**, **analisis data**
 
 ## 🎓 Latar Belakang Akademik
 - **Magister Data Science**, Universitas Pamulang *(2024–sekarang)*  
-  Fokus pada penerapan AI untuk data sosial dan bisnis.  
+  Fokus pada penerapan AI.  
 
 ---
 
@@ -33,7 +33,7 @@ Ke depan, saya bercita-cita menjadi **Data Scientist** yang mampu menjembatani p
 
 ## 📫 Kontak
 Jika Anda tertarik untuk berdiskusi atau berkolaborasi dalam proyek riset atau pengembangan berbasis data, jangan ragu untuk menghubungi saya melalui:  
-- **Email:** alex.nugraha@unpam.ac.id  
+- **Email:** alex.nugraha@gmail.com  
 - **LinkedIn:** [linkedin.com/in/alexnugraha](https://linkedin.com/in/alexnugraha)
 
 ---
