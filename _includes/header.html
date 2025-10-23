@@ -1,15 +1,22 @@
 <header class="site-header">
   <div class="header-inner">
     <div class="brand">
-      <a class="brand-link" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <a class="brand-link" href="{{ '/' | relative_url }}">{{ site.title | default: "Alex Nugraha Setia" }}</a>
     </div>
 
     <nav class="main-nav">
-      <a href="{{ '/' | relative_url }}">{{ site.data.lang[site.lang].nav_home }}</a>
-      <a href="{{ '/projects.html' | relative_url }}">{{ site.data.lang[site.lang].nav_projects }}</a>
-      <a href="{{ '/blog.html' | relative_url }}">{{ site.data.lang[site.lang].nav_blog }}</a>
-      <a href="{{ '/cv.html' | relative_url }}">{{ site.data.lang[site.lang].nav_cv }}</a>
-      <a href="{{ '/about.html' | relative_url }}">{{ site.data.lang[site.lang].nav_about }}</a>
+      <a href="{{ '/' | relative_url }}">
+        {{ site.data.lang[site.lang].nav_home | default: "Home" }}
+      </a>
+      <a href="{{ '/projects.html' | relative_url }}">
+        {{ site.data.lang[site.lang].nav_projects | default: "Projects" }}
+      </a>
+      <a href="{{ '/cv.html' | relative_url }}">
+        {{ site.data.lang[site.lang].nav_cv | default: "CV" }}
+      </a>
+      <a href="{{ '/about.html' | relative_url }}">
+        {{ site.data.lang[site.lang].nav_about | default: "About" }}
+      </a>
     </nav>
 
     <div class="header-controls">
@@ -23,13 +30,31 @@
 </header>
 
 <script>
-// Simple language switch (client-side): store in localStorage and reload to let templates pick up via site.lang if building with plugin.
-// This is a simple client-side label switch fallback.
-document.getElementById('lang-switch').value = localStorage.getItem('site_lang') || '{{ site.default_lang }}';
-document.getElementById('lang-switch').addEventListener('change', function(e){
-  localStorage.setItem('site_lang', e.target.value);
-  // store as cookie so future builds or client scripts can read; here we just reload
-  document.cookie = 'site_lang=' + e.target.value + '; path=/';
-  location.reload();
-});
+// --- language switch ---
+const langSel = document.getElementById('lang-switch');
+if (langSel) {
+  const current = localStorage.getItem('site_lang') || '{{ site.default_lang }}';
+  langSel.value = current;
+  langSel.addEventListener('change', e => {
+    localStorage.setItem('site_lang', e.target.value);
+    document.cookie = 'site_lang=' + e.target.value + '; path=/';
+    location.reload();
+  });
+}
+
+// --- dark mode toggle ---
+const themeToggle = document.getElementById('theme-toggle');
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const html = document.documentElement;
+    const current = html.classList.contains('theme-dark') ? 'theme-dark' : 'theme-light';
+    const next = current === 'theme-dark' ? 'theme-light' : 'theme-dark';
+    html.classList.remove(current);
+    html.classList.add(next);
+    localStorage.setItem('theme', next);
+  });
+
+  const saved = localStorage.getItem('theme');
+  if (saved) document.documentElement.classList.add(saved);
+}
 </script>
