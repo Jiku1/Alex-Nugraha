@@ -1,0 +1,55 @@
+:root{
+  --bg-light: #f8f7f4;
+  --text-light: #1f2937;
+  --muted: #6b7280;
+  --accent: #9ca3af;
+  --bg-dark: #0b1220;
+  --text-dark: #e6eef8;
+  --max-w: 1100px;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+*{box-sizing:border-box}
+body{margin:0;transition:background 0.2s,color 0.2s}
+.wrap{max-width:var(--max-w);margin:30px auto;padding:18px}
+
+.site-header{display:flex;justify-content:space-between;align-items:center;padding:12px 18px}
+.brand-link{font-weight:700;text-decoration:none}
+.main-nav a{margin:0 10px;text-decoration:none;color:inherit}
+
+.header-controls{display:flex;gap:8px;align-items:center;margin-left:12px}
+
+.profile{width:108px;border-radius:10px;float:right;margin-left:16px}
+
+/* content */
+.content{background:transparent;padding:12px}
+.project-list{list-style:none;padding:0;margin:0}
+.project-card{border-radius:10px;padding:14px;margin-bottom:14px;border:1px solid rgba(0,0,0,0.06)}
+
+/* footer */
+.site-footer{text-align:center;padding:18px;margin-top:30px;color:var(--muted)}
+
+/* dark mode default (prefers) */
+@media (prefers-color-scheme: dark) {
+  body{background:var(--bg-dark);color:var(--text-dark)}
+  .site-header,.site-footer{background:rgba(255,255,255,0.03)}
+  .project-card{border:1px solid rgba(255,255,255,0.04)}
+}
+
+/* light */
+@media (prefers-color-scheme: light) {
+  body{background:var(--bg-light);color:var(--text-light)}
+  .site-header,.site-footer{background:rgba(0,0,0,0.02)}
+}
+
+/* manual override via .theme-dark or .theme-light on <html> */
+html.theme-dark body{background:var(--bg-dark);color:var(--text-dark)}
+html.theme-dark .site-header,.theme-dark .site-footer{background:rgba(255,255,255,0.03)}
+html.theme-light body{background:var(--bg-light);color:var(--text-light)}
+
+/* responsive */
+@media (max-width:800px){
+  .main-nav{display:none}
+  .header-controls select{display:none}
+  .profile{width:84px}
+}

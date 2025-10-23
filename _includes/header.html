@@ -1,0 +1,35 @@
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <a class="brand-link" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    </div>
+
+    <nav class="main-nav">
+      <a href="{{ '/' | relative_url }}">{{ site.data.lang[site.lang].nav_home }}</a>
+      <a href="{{ '/projects.html' | relative_url }}">{{ site.data.lang[site.lang].nav_projects }}</a>
+      <a href="{{ '/blog.html' | relative_url }}">{{ site.data.lang[site.lang].nav_blog }}</a>
+      <a href="{{ '/cv.html' | relative_url }}">{{ site.data.lang[site.lang].nav_cv }}</a>
+      <a href="{{ '/about.html' | relative_url }}">{{ site.data.lang[site.lang].nav_about }}</a>
+    </nav>
+
+    <div class="header-controls">
+      <select id="lang-switch" aria-label="Language switch">
+        <option value="id">ID</option>
+        <option value="en">EN</option>
+      </select>
+      <button id="theme-toggle" aria-label="Toggle theme">🌓</button>
+    </div>
+  </div>
+</header>
+
+<script>
+// Simple language switch (client-side): store in localStorage and reload to let templates pick up via site.lang if building with plugin.
+// This is a simple client-side label switch fallback.
+document.getElementById('lang-switch').value = localStorage.getItem('site_lang') || '{{ site.default_lang }}';
+document.getElementById('lang-switch').addEventListener('change', function(e){
+  localStorage.setItem('site_lang', e.target.value);
+  // store as cookie so future builds or client scripts can read; here we just reload
+  document.cookie = 'site_lang=' + e.target.value + '; path=/';
+  location.reload();
+});
+</script>

@@ -1,0 +1,11 @@
+- title: Analisis Sentimen Teks Indonesia
+  description: Menggunakan LSTM untuk klasifikasi opini publik di media sosial.
+  link: https://github.com/alexnugrahasetia/sentiment-lstm
+
+- title: Model Prediksi Cuaca
+  description: Integrasi data IoT dan machine learning untuk prediksi hujan.
+  link: https://github.com/alexnugrahasetia/weather-ml
+
+- title: Visualisasi Data Akademik
+  description: Dashboard interaktif berbasis Jekyll & D3.js.
+  link: https://github.com/alexnugrahasetia/academic-dashboard

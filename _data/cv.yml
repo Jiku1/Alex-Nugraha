@@ -1,0 +1,13 @@
+name: "Alex Nugraha Setia"
+email: "alex@example.com"
+github: "https://github.com/jiku1"
+bio_short: "Mahasiswa S2 fokus pada machine learning dan analisis data."
+bio: "Saya seorang mahasiswa S2 dengan fokus pada analisis data, machine learning, dan aplikasi sistem cerdas. Saya tertarik mengaplikasikan model ML untuk masalah dunia nyata."
+education:
+  - degree: "S.T. Computer Science"
+    institution: "Universitas Teknologi"
+    year: "2022"
+skills:
+  - "Machine Learning"
+  - "Natural Language Processing"
+  - "Data Visualization"

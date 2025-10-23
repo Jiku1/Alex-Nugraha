@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="{{ site.lang | default: site.default_lang }}">
+  {% include head.html %}
+  <body class="site-body">
+    {% include header.html %}
+
+    <div class="wrap">
+      <main class="content">
+        {{ content }}
+      </main>
+    </div>
+
+    {% include footer.html %}
+    <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
+    <script>/* set site.lang default to window or cookie if needed */</script>
+  </body>
+</html>
