@@ -1,7 +1,9 @@
 <header class="site-header">
-  <div class="header-inner">
+  <div class="header-container">
     <div class="brand">
-      <a class="brand-link" href="{{ '/' | relative_url }}">{{ site.title | default: "Alex Nugraha Setia" }}</a>
+      <a class="brand-link" href="{{ '/' | relative_url }}">
+        {{ site.title | default: "Alex Nugraha Setia" }}
+      </a>
     </div>
 
     <nav class="main-nav">
@@ -20,3 +22,40 @@
     </div>
   </div>
 </header>
+
+<script>
+// --- Language switch ---
+const langSel = document.getElementById('lang-switch');
+if (langSel) {
+  const current = localStorage.getItem('site_lang') || '{{ site.default_lang }}';
+  langSel.value = current;
+  langSel.addEventListener('change', e => {
+    localStorage.setItem('site_lang', e.target.value);
+    document.cookie = 'site_lang=' + e.target.value + '; path=/';
+    location.reload();
+  });
+}
+
+// --- Theme toggle (fixed event bug) ---
+const themeToggle = document.getElementById('theme-toggle');
+if (themeToggle) {
+  themeToggle.addEventListener('click', e => {
+    e.preventDefault(); // 🚫 stop from bubbling to nav
+    e.stopPropagation();
+
+    const html = document.documentElement;
+    const isDark = html.classList.contains('theme-dark');
+    html.classList.toggle('theme-dark', !isDark);
+    html.classList.toggle('theme-light', isDark);
+    localStorage.setItem('theme', isDark ? 'theme-light' : 'theme-dark');
+  });
+
+  // apply saved theme
+  const saved = localStorage.getItem('theme');
+  if (saved) {
+    document.documentElement.classList.add(saved);
+  } else {
+    document.documentElement.classList.add('theme-light');
+  }
+}
+</script>

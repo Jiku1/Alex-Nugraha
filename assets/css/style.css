@@ -1,38 +1,33 @@
-/* =============================
-   🌗 Global Variables (Light/Dark)
-============================= */
+/* ---------- Theme Variables ---------- */
 :root {
-  --bg-light: #f9fafb;
-  --text-light: #1f2937;
-  --header-bg-light: #ffffff;
-  --border-light: #e5e7eb;
+  --light-bg: #f8fafc;
+  --light-text: #1f2937;
+  --light-header: #ffffff;
+  --light-border: #e5e7eb;
 
-  --bg-dark: #0f172a;
-  --text-dark: #f1f5f9;
-  --header-bg-dark: #1e293b;
-  --border-dark: #334155;
+  --dark-bg: #0f172a;
+  --dark-text: #f1f5f9;
+  --dark-header: #1e293b;
+  --dark-border: #334155;
 
   --accent: #2563eb;
 }
 
-/* Automatically switch theme */
 html.theme-light {
-  --bg: var(--bg-light);
-  --text: var(--text-light);
-  --header-bg: var(--header-bg-light);
-  --border: var(--border-light);
+  --bg: var(--light-bg);
+  --text: var(--light-text);
+  --header-bg: var(--light-header);
+  --border: var(--light-border);
 }
 
 html.theme-dark {
-  --bg: var(--bg-dark);
-  --text: var(--text-dark);
-  --header-bg: var(--header-bg-dark);
-  --border: var(--border-dark);
+  --bg: var(--dark-bg);
+  --text: var(--dark-text);
+  --header-bg: var(--dark-header);
+  --border: var(--dark-border);
 }
 
-/* =============================
-   🧍 Body & Layout
-============================= */
+/* ---------- Body ---------- */
 body {
   margin: 0;
   font-family: 'Inter', system-ui, sans-serif;
@@ -40,41 +35,36 @@ body {
   color: var(--text);
   display: flex;
   flex-direction: column;
+  align-items: center; /* ✅ center horizontally */
   min-height: 100vh;
 }
 
-/* Wrap for center alignment */
-.wrap {
-  display: flex;
-  justify-content: center;
-  flex: 1;
-}
-
-.content {
+/* ---------- Container ---------- */
+.wrap, .content {
   width: 100%;
   max-width: 1100px;
-  padding: 2rem 1.5rem;
+  margin: 0 auto;
+  padding: 2rem 1rem;
   box-sizing: border-box;
 }
 
-/* =============================
-   🧭 Header / Navbar
-============================= */
+/* ---------- Header ---------- */
 .site-header {
+  width: 100%;
   background: var(--header-bg);
   border-bottom: 1px solid var(--border);
-  padding: 0.8rem 1.5rem;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-.header-inner {
+.header-container {
   max-width: 1100px;
   margin: 0 auto;
+  padding: 0.8rem 1.5rem;
   display: flex;
+  justify-content: space-between; /* ✅ center the structure */
   align-items: center;
-  justify-content: space-between;
   flex-wrap: wrap;
 }
 
@@ -88,13 +78,12 @@ body {
 .main-nav {
   display: flex;
   gap: 1.5rem;
-  flex-wrap: wrap;
 }
 
 .main-nav a {
   color: var(--text);
-  text-decoration: none;
   font-weight: 500;
+  text-decoration: none;
   transition: color 0.2s ease;
 }
 
@@ -102,11 +91,10 @@ body {
   color: var(--accent);
 }
 
-/* Header controls */
 .header-controls {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.5rem;
 }
 
 select, button {
@@ -116,69 +104,22 @@ select, button {
   border-radius: 6px;
   padding: 0.3rem 0.6rem;
   cursor: pointer;
-  font-size: 0.9rem;
 }
 
-button:hover, select:hover {
+select:hover, button:hover {
   border-color: var(--accent);
 }
 
-/* =============================
-   📦 Content (Headings, Lists)
-============================= */
-h1, h2, h3 {
-  color: var(--text);
-  line-height: 1.2;
-}
-
-h1 {
-  font-size: 2rem;
-  margin-top: 0;
-}
-
-ul {
-  padding-left: 1.2rem;
-}
-
-a {
-  color: var(--accent);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* =============================
-   🧱 Footer
-============================= */
+/* ---------- Footer ---------- */
 footer {
   max-width: 1100px;
-  margin: 0 auto;
-  padding: 1rem 1.5rem;
-  text-align: center;
+  margin: 2rem auto 0;
+  padding: 1rem;
   border-top: 1px solid var(--border);
-  font-size: 0.9rem;
+  text-align: center;
   color: var(--text);
   opacity: 0.8;
+  font-size: 0.9rem;
 }
 
-/* =============================
-   📱 Responsive
-============================= */
-@media (max-width: 768px) {
-  .header-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.8rem;
-  }
-
-  .main-nav {
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-
-  .content {
-    padding: 1.5rem 1rem;
-  }
-}
+/* ---------- Responsive ------*
