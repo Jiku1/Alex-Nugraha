@@ -2,7 +2,6 @@
 layout: default
 title: Home
 ---
-{% include header.html %}
 
 <section class="hero">
   <h1>{{ site.title }}</h1>
