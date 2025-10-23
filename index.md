@@ -19,3 +19,12 @@ title: Home
     {% endfor %}
   </ul>
 </section>
+
+<section class="upcoming-events">
+  <h2>{{ site.data.lang[site.lang].events_heading }}</h2>
+  <ul>
+    {% for ev in site.data.events %}
+      <li>{{ ev.date }} — <strong>{{ ev.title }}</strong> ({{ ev.location }})</li>
+    {% endfor %}
+  </ul>
+</section>
