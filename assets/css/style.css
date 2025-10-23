@@ -21,17 +21,16 @@ body {
   color: var(--text);
   transition: background 0.3s, color 0.3s;
 }
-
-/* Navbar */
-.navbar {
+/* ===== NAVBAR STYLING ===== */
+.site-header {
   background: var(--nav-bg);
   border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 999;
 }
 
-.navbar .container {
+.header-inner {
   max-width: 960px;
   margin: 0 auto;
   padding: 1rem 1.2rem;
@@ -40,38 +39,35 @@ body {
   align-items: center;
 }
 
-.logo {
+.brand-link {
   color: var(--accent);
   text-decoration: none;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
 }
 
-.nav-links a {
+.main-nav a {
   text-decoration: none;
   color: var(--text);
-  margin: 0 0.75rem;
+  margin: 0 0.6rem;
   font-weight: 500;
-  transition: color 0.2s;
+  transition: color 0.2s ease;
 }
 
-.nav-links a:hover {
+.main-nav a:hover {
   color: var(--accent);
 }
 
-.controls {
+.header-controls {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.4rem;
 }
 
-.controls select, .controls button {
-  background: var(--nav-bg);
+.header-controls select,
+.header-controls button {
   border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 0.3rem 0.5rem;
-  cursor: pointer;
-  color: var(--text);
-}
+  border-radi
+
 
 /* Content */
 .container {
