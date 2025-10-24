@@ -7,6 +7,7 @@
   --card-bg: #ffffff;
 }
 
+
 body {
   font-family: "Inter", system-ui, sans-serif;
   background: var(--bg);
@@ -101,7 +102,6 @@ h1, h2, h3 {
 
 /*about */
 /* ABOUT PAGE MODERN */
-
 .about-container-modern {
   max-width: 900px;
   margin: 2rem auto;
@@ -111,7 +111,6 @@ h1, h2, h3 {
   font-family: "Inter", sans-serif;
 }
 
-/* FOTO + INTRO HORIZONTAL */
 .about-intro-row {
   display: flex;
   gap: 2rem;
@@ -123,10 +122,11 @@ h1, h2, h3 {
   width: 200px;
   border-radius: 12px;
   border: 2px solid var(--border);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .about-intro-text h1 {
-  margin: 0;
+  margin: 0 0 0.5rem 0;
   color: var(--accent);
 }
 
@@ -134,7 +134,7 @@ h1, h2, h3 {
   line-height: 1.6;
 }
 
-/* SECTION CARD */
+/* Section card */
 .about-section {
   background: var(--card-bg);
   padding: 1.5rem;
@@ -152,7 +152,16 @@ h1, h2, h3 {
   margin: 0;
 }
 
-/* RESPONSIVE */
+.about-section a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.about-section a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .about-intro-row {
     flex-direction: column;
@@ -162,9 +171,6 @@ h1, h2, h3 {
 
   .about-photo img {
     width: 150px;
-  }
-
-  .about-intro-text p {
-    max-width: 100%;
+    margin-bottom: 1rem;
   }
 }
