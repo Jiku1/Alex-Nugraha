@@ -58,7 +58,7 @@ title: "ML Notes"
 
   <!-- Sections lainnya dari YAML -->
   {% for section in site.data.ml-notes.sections %}
-  <section>
+  <section id="{{ section.id }}">
     <h2>{{ section.heading }}</h2>
     <ul>
       {% for point in section.points %}
