@@ -3,81 +3,44 @@
   <p><strong>Ditulis oleh:</strong> {{ site.data.ml-notes.author }}</p>
   <p><em>{{ site.data.ml-notes.date }}</em></p>
 
-  <!-- Intro -->
   {% if site.data.ml-notes.intro %}
   <section id="intro">
     <p>{{ site.data.ml-notes.intro }}</p>
   </section>
   {% endif %}
 
-  <!-- Review AlexNet -->
   {% if site.data.ml-notes.review_alexnet %}
   <section id="review-alexnet">
     <h2>Review AlexNet</h2>
     <p>{{ site.data.ml-notes.review_alexnet.content }}</p>
 
-    {% if site.data.ml-notes.review_alexnet.architecture %}
-    <h3>Arsitektur & Komponen</h3>
-    <ul>
-      {% for item in site.data.ml-notes.review_alexnet.architecture %}
-      <li>{{ item }}</li>
-      {% endfor %}
-    </ul>
-    {% endif %}
-
-    {% if site.data.ml-notes.review_alexnet.advantages %}
-    <h3>Kelebihan</h3>
-    <ul>
-      {% for item in site.data.ml-notes.review_alexnet.advantages %}
-      <li>{{ item }}</li>
-      {% endfor %}
-    </ul>
-    {% endif %}
-
-    {% if site.data.ml-notes.review_alexnet.disadvantages %}
-    <h3>Kekurangan</h3>
-    <ul>
-      {% for item in site.data.ml-notes.review_alexnet.disadvantages %}
-      <li>{{ item }}</li>
-      {% endfor %}
-    </ul>
-    {% endif %}
-
-    {% if site.data.ml-notes.review_alexnet.applications %}
-    <h3>Aplikasi</h3>
-    <ul>
-      {% for item in site.data.ml-notes.review_alexnet.applications %}
-      <li>{{ item }}</li>
-      {% endfor %}
-    </ul>
-    {% endif %}
-
-    {% if site.data.ml-notes.review_alexnet.references %}
-    <h3>Referensi</h3>
-    <ol>
-      {% for item in site.data.ml-notes.review_alexnet.references %}
-      <li>{{ item }}</li>
-      {% endfor %}
-    </ol>
-    {% endif %}
+    {% for key in "architecture,advantages,disadvantages,applications,references" | split: "," %}
+      {% assign items = site.data.ml-notes.review_alexnet[key] %}
+      {% if items %}
+        <h3>{{ key | capitalize }}</h3>
+        <ul>
+          {% for item in items %}
+            <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endfor %}
   </section>
   {% endif %}
 
-  <!-- Sections lainnya dari YAML -->
   {% if site.data.ml-notes.sections %}
-  {% for section in site.data.ml-notes.sections %}
-  <section id="{{ section.id }}">
-    <h2>{{ section.heading }}</h2>
-    <ul>
-      {% for point in section.points %}
-      <li>{{ point }}</li>
-      {% endfor %}
-    </ul>
-  </section>
-  {% endfor %}
+    {% for section in site.data.ml-notes.sections %}
+    <section id="{{ section.id | default: '' }}">
+      <h2>{{ section.heading }}</h2>
+      <ul>
+        {% for point in section.points %}
+          <li>{{ point }}</li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endfor %}
   {% endif %}
 
-  <!-- Visualisasi -->
   {% if site.data.ml-notes.visuals %}
   <section id="visuals">
     <h2>Visualisasi Hasil</h2>
@@ -88,13 +51,12 @@
   </section>
   {% endif %}
 
-  <!-- Kode -->
   {% if site.data.ml-notes.code_examples %}
   <section id="code">
     <h2>Kode & Contoh</h2>
     {% for code in site.data.ml-notes.code_examples %}
       <p>{{ code.description }}</p>
-      <pre><code>{% include_relative {{ code.file }} %}</code></pre>
+      <pre><code>{% include_relative {{ code.file | replace: '"', '' }} %}</code></pre>
     {% endfor %}
   </section>
   {% endif %}
