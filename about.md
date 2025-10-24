@@ -5,12 +5,12 @@ title: Tentang Saya
 
 <div class="about-container">
 
-  <!-- Foto Profil Kiri -->
+  <!-- FOTO PROFIL -->
   <div class="about-photo">
     <img src="{{ '/assets/images/alex.jpg' | relative_url }}" alt="Alex Nugraha Setia">
   </div>
 
-  <!-- Teks Kanan -->
+  <!-- TEKS ABOUT -->
   <div class="about-text">
 
 # Tentang Saya
@@ -31,7 +31,7 @@ Saya memiliki ketertarikan mendalam pada **machine learning**, **analisis data**
 - Machine Learning & Deep Learning  
 - Natural Language Processing (NLP)  
 - Data Visualization & Dashboard Design  
-- Python (Pandas, TensorFlow, scikit-learn, Plotly, D3.js)  
+- Python (Pandas, TensorFlow, scikit-learn, Plotly, D3.js)
 
 ---
 

@@ -98,6 +98,8 @@ h1, h2, h3 {
   color: var(--muted);
   font-size: 0.9rem;
 }
+
+/*about */
 .about-container {
   display: flex;
   align-items: flex-start;
@@ -123,10 +125,6 @@ h1, h2, h3 {
   color: var(--accent);
 }
 
-.about-text h2, .about-text h3 {
-  color: var(--accent);
-}
-
 @media (max-width: 768px) {
   .about-container {
     flex-direction: column;
@@ -139,4 +137,3 @@ h1, h2, h3 {
     margin-bottom: 1rem;
   }
 }
-
