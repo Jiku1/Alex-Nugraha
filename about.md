@@ -5,23 +5,20 @@ title: Tentang Saya
 
 <div class="about-container-modern">
 
-  <!-- FOTO + INTRO -->
   <div class="about-intro-row">
     <div class="about-photo">
       <img src="{{ '/assets/img/alex.jpg' | relative_url }}" alt="Alex Nugraha Setia">
     </div>
     <div class="about-intro-text">
-      <h1>Halo! Saya Alex Nugraha Setia</h1>
-      <p>Mahasiswa <strong>Magister Teknik Informatika</strong> di <strong>Universitas Pamulang</strong>. Tertarik pada <strong>Machine Learning</strong>, <strong>Natural Language Processing (NLP)</strong>, dan <strong>Data Visualization</strong>.</p>
+      <h1>Alex Nugraha Setia</h1>
+      <p>Mahasiswa Magister Teknik Informatika di <strong>Universitas Pamulang</strong>. Saya fokus pada penerapan <strong>machine learning</strong>, <strong>analisis data</strong>, dan <strong>Natural Language Processing (NLP)</strong> untuk membantu organisasi mengambil keputusan berbasis data.</p>
     </div>
   </div>
 
-  <!-- SECTION CARD -->
   <div class="about-section">
     <h2>🎓 Latar Belakang Akademik</h2>
-    <ul>
-      <li>Magister Teknik Informatika, Universitas Pamulang (2024–sekarang)</li>
-    </ul>
+    <p><strong>Magister Data Teknik Informatika</strong>, Universitas Pamulang (2024–sekarang)<br>
+    Fokus pada pengembangan model kecerdasan buatan dan penerapan data analytics di bidang sosial dan industri.</p>
   </div>
 
   <div class="about-section">
@@ -30,21 +27,21 @@ title: Tentang Saya
       <li>Machine Learning & Deep Learning</li>
       <li>Natural Language Processing (NLP)</li>
       <li>Data Visualization & Dashboard Design</li>
-      <li>Python (Pandas, TensorFlow, scikit-learn, Plotly, D3.js)</li>
+      <li>Python (Pandas, TensorFlow, scikit-learn, Plotly)</li>
     </ul>
   </div>
 
   <div class="about-section">
-    <h2>🔍 Tujuan Profesional</h2>
-    <p>Mengembangkan solusi berbasis data untuk meningkatkan efisiensi pengambilan keputusan. Berkomitmen menjadi <strong>Data Scientist</strong> yang menjembatani riset dan praktik.</p>
+    <h2>🔍 Tujuan Akademik & Profesional</h2>
+    <p>Mengembangkan solusi berbasis data untuk meningkatkan efisiensi dan transparansi dalam pengambilan keputusan, baik di sektor publik maupun industri. Saya ingin menjadi <strong>Data Scientist</strong> yang menjembatani riset akademik dengan penerapan nyata.</p>
   </div>
 
   <div class="about-section">
     <h2>📫 Kontak</h2>
-    <ul>
-      <li>Email: alex.nugraha@gmail.com</li>
-      <li>LinkedIn: <a href="https://linkedin.com/in/alexnugraha" target="_blank">linkedin.com/in/alexnugraha</a></li>
-    </ul>
+    <p>
+      <strong>Email:</strong> <a href="mailto:alex.nugraha13@gmail.com">alex.nugraha@gmail.com</a><br>
+      <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/alexnugraha" target="_blank">linkedin.com/in/alexnugraha</a>
+    </p>
   </div>
 
 </div>
