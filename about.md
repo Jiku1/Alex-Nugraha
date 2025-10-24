@@ -2,16 +2,21 @@
 layout: default
 title: Tentang Saya
 ---
+
 <div class="about-container-modern">
-  <div class="about-photo">
-    <img src="{{ '/assets/img/alex.jpg' | relative_url }}" alt="Alex Nugraha Setia">
+
+  <!-- FOTO + INTRO -->
+  <div class="about-intro-row">
+    <div class="about-photo">
+      <img src="{{ '/assets/img/alex.jpg' | relative_url }}" alt="Alex Nugraha Setia">
+    </div>
+    <div class="about-intro-text">
+      <h1>Halo! 👋 Saya Alex Nugraha Setia</h1>
+      <p>Mahasiswa <strong>Magister Data Science</strong> di <strong>Universitas Pamulang</strong>. Tertarik pada <strong>Machine Learning</strong>, <strong>Natural Language Processing (NLP)</strong>, dan <strong>Data Visualization</strong>.</p>
+    </div>
   </div>
 
-  <div class="about-intro">
-    <h1>Tentang Saya</h1>
-    <p>Halo! 👋 Saya <strong>Alex Nugraha Setia</strong>, mahasiswa <strong>Magister Data Science</strong> di <strong>Universitas Pamulang</strong>. Tertarik pada machine learning, NLP, dan visualisasi data.</p>
-  </div>
-
+  <!-- SECTION CARD -->
   <div class="about-section">
     <h2>🎓 Latar Belakang Akademik</h2>
     <ul>
@@ -31,7 +36,7 @@ title: Tentang Saya
 
   <div class="about-section">
     <h2>🔍 Tujuan Profesional</h2>
-    <p>Mengembangkan solusi berbasis data untuk meningkatkan efisiensi pengambilan keputusan. Berkomitmen menjadi Data Scientist yang menjembatani riset dan praktik.</p>
+    <p>Mengembangkan solusi berbasis data untuk meningkatkan efisiensi pengambilan keputusan. Berkomitmen menjadi <strong>Data Scientist</strong> yang menjembatani riset dan praktik.</p>
   </div>
 
   <div class="about-section">
@@ -41,4 +46,5 @@ title: Tentang Saya
       <li>LinkedIn: <a href="https://linkedin.com/in/alexnugraha" target="_blank">linkedin.com/in/alexnugraha</a></li>
     </ul>
   </div>
+
 </div>
