@@ -1,5 +1,19 @@
-Halo! Saya Alex Nugraha 👋
-Mahasiswa S2 Teknik Informatika di Universitas XYZ.
-Saya memiliki minat besar pada Machine Learning, Data Science, dan penerapan AI untuk solusi nyata di bidang Smart City dan IoT.
+name: "Alex Nugraha"
+title: "Mahasiswa S2 Teknik Informatika"
+university: "Universitas XYZ"
 
-Selama studi, saya fokus pada bagaimana algoritma pembelajaran mesin dapat digunakan untuk memahami data kompleks dan membantu pengambilan keputusan berbasis data. Saya suka memadukan penelitian akademik dengan pengembangan proyek praktis.
+intro: >
+  Halo! Saya Alex Nugraha 👋  
+  Mahasiswa S2 Teknik Informatika di Universitas XYZ.  
+  Saya memiliki minat besar pada **Machine Learning**, **Data Science**, dan penerapan **AI untuk solusi nyata** di bidang Smart City dan IoT.
+
+focus: >
+  Selama studi, saya fokus pada bagaimana algoritma pembelajaran mesin dapat digunakan untuk memahami data kompleks dan membantu pengambilan keputusan berbasis data.  
+  Saya suka memadukan penelitian akademik dengan pengembangan proyek praktis.
+
+interests:
+  - Machine Learning
+  - Data Science
+  - Artificial Intelligence
+  - Smart City
+  - Internet of Things (IoT)
