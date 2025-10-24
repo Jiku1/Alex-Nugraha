@@ -11,8 +11,8 @@ title: Tentang Saya
       <img src="{{ '/assets/img/alex.jpg' | relative_url }}" alt="Alex Nugraha Setia">
     </div>
     <div class="about-intro-text">
-      <h1>Halo! 👋 Saya Alex Nugraha Setia</h1>
-      <p>Mahasiswa <strong>Magister Data Science</strong> di <strong>Universitas Pamulang</strong>. Tertarik pada <strong>Machine Learning</strong>, <strong>Natural Language Processing (NLP)</strong>, dan <strong>Data Visualization</strong>.</p>
+      <h1>Halo! Saya Alex Nugraha Setia</h1>
+      <p>Mahasiswa <strong>Magister Teknik Informatika</strong> di <strong>Universitas Pamulang</strong>. Tertarik pada <strong>Machine Learning</strong>, <strong>Natural Language Processing (NLP)</strong>, dan <strong>Data Visualization</strong>.</p>
     </div>
   </div>
 
@@ -20,7 +20,7 @@ title: Tentang Saya
   <div class="about-section">
     <h2>🎓 Latar Belakang Akademik</h2>
     <ul>
-      <li>Magister Data Science, Universitas Pamulang (2024–sekarang)</li>
+      <li>Magister Teknik Informatika, Universitas Pamulang (2024–sekarang)</li>
     </ul>
   </div>
 
