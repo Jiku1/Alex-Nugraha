@@ -84,3 +84,13 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font-fami
 .blog-card a:hover {
   text-decoration: underline;
 }
+/* Pastikan seluruh isi blog di tengah halaman */
+.blog-container {
+  max-width: 800px;   /* batasi lebar konten */
+  margin: 0 auto;     /* ini yang bikin tengah horizontal */
+  padding: 40px 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  text-align: left;   /* pastikan teks tetap rata kiri */
+}
