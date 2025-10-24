@@ -13,3 +13,5 @@ google_analytics: "UA-XXXXXXXXX-X"
 default_lang: id
 languages: ["id","en"]
 url: "https://jiku1.github.io"
+url: "https://jiku1.github.io"
+baseurl: "/Alex-Nugraha"
