@@ -16,22 +16,26 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-family);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-/* Container universal */
+/* ======== Universal Container ======== */
 .container {
   max-width: var(--max-w);
   margin: 0 auto;
   padding: 0 1rem;
 }
 
-/* ========== Header ========== */
+/* ======== Header ======== */
 .site-header {
   background: var(--card-bg);
   border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
   z-index: 1000;
+  width: 100%;
 }
 
 .header-inner {
@@ -39,7 +43,9 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  padding: 0.9rem 0;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0.9rem 1rem;
 }
 
 .brand-link {
@@ -59,19 +65,20 @@ body {
   color: var(--accent);
 }
 
-/* ========== Konten Utama (Semua halaman) ========== */
+/* ======== Konten Utama ======== */
 .content {
+  flex: 1;
   max-width: var(--max-w);
   margin: 2rem auto;
   padding: 2rem 1.5rem;
   background: var(--card-bg);
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.03);
   text-align: left;
 }
 
-/* ========== Home Hero Section ========== */
+/* ======== Home Hero ======== */
 .home-hero {
   text-align: center;
   padding: 2rem;
@@ -89,7 +96,7 @@ body {
   margin: 0;
 }
 
-/* ========== Project & Blog Cards ========== */
+/* ======== Project & Blog Cards ======== */
 .project-list,
 .blog-list {
   list-style: none;
@@ -129,7 +136,7 @@ body {
   text-decoration: underline;
 }
 
-/* ========== Blog Container (khusus blog page) ========== */
+/* ======== Blog Container ======== */
 .blog-container {
   max-width: 800px;
   margin: 0 auto;
@@ -140,7 +147,7 @@ body {
   text-align: left;
 }
 
-/* ========== About Page ========== */
+/* ======== About ======== */
 .about-container-modern {
   max-width: 900px;
   margin: 0 auto;
@@ -176,7 +183,7 @@ body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
-/* ========== CV Page ========== */
+/* ======== CV ======== */
 .cv-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -190,16 +197,19 @@ body {
   border: 1px solid var(--border);
 }
 
-/* ========== Footer ========== */
+/* ======== Footer ======== */
 .site-footer {
-  margin-top: 2rem;
+  background: var(--card-bg);
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
   padding: 1rem;
   text-align: center;
   color: var(--muted);
   font-size: 0.95rem;
+  width: 100%;
 }
 
-/* ========== Responsiveness ========== */
+/* ======== Responsiveness ======== */
 @media (max-width: 768px) {
   .about-intro-row {
     flex-direction: column;
