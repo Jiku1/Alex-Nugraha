@@ -1,17 +1,14 @@
----
-layout: default
-title: "ML Notes"
----
-
 <article class="ml-notes">
   <h1>{{ site.data.ml-notes.title }}</h1>
   <p><strong>Ditulis oleh:</strong> {{ site.data.ml-notes.author }}</p>
   <p><em>{{ site.data.ml-notes.date }}</em></p>
 
   <!-- Intro -->
+  {% if site.data.ml-notes.intro %}
   <section id="intro">
     <p>{{ site.data.ml-notes.intro }}</p>
   </section>
+  {% endif %}
 
   <!-- Review AlexNet -->
   {% if site.data.ml-notes.review_alexnet %}
@@ -19,44 +16,55 @@ title: "ML Notes"
     <h2>Review AlexNet</h2>
     <p>{{ site.data.ml-notes.review_alexnet.content }}</p>
 
+    {% if site.data.ml-notes.review_alexnet.architecture %}
     <h3>Arsitektur & Komponen</h3>
     <ul>
       {% for item in site.data.ml-notes.review_alexnet.architecture %}
       <li>{{ item }}</li>
       {% endfor %}
     </ul>
+    {% endif %}
 
+    {% if site.data.ml-notes.review_alexnet.advantages %}
     <h3>Kelebihan</h3>
     <ul>
       {% for item in site.data.ml-notes.review_alexnet.advantages %}
       <li>{{ item }}</li>
       {% endfor %}
     </ul>
+    {% endif %}
 
+    {% if site.data.ml-notes.review_alexnet.disadvantages %}
     <h3>Kekurangan</h3>
     <ul>
       {% for item in site.data.ml-notes.review_alexnet.disadvantages %}
       <li>{{ item }}</li>
       {% endfor %}
     </ul>
+    {% endif %}
 
+    {% if site.data.ml-notes.review_alexnet.applications %}
     <h3>Aplikasi</h3>
     <ul>
       {% for item in site.data.ml-notes.review_alexnet.applications %}
       <li>{{ item }}</li>
       {% endfor %}
     </ul>
+    {% endif %}
 
+    {% if site.data.ml-notes.review_alexnet.references %}
     <h3>Referensi</h3>
     <ol>
       {% for item in site.data.ml-notes.review_alexnet.references %}
       <li>{{ item }}</li>
       {% endfor %}
     </ol>
+    {% endif %}
   </section>
   {% endif %}
 
   <!-- Sections lainnya dari YAML -->
+  {% if site.data.ml-notes.sections %}
   {% for section in site.data.ml-notes.sections %}
   <section id="{{ section.id }}">
     <h2>{{ section.heading }}</h2>
@@ -67,6 +75,7 @@ title: "ML Notes"
     </ul>
   </section>
   {% endfor %}
+  {% endif %}
 
   <!-- Visualisasi -->
   {% if site.data.ml-notes.visuals %}
@@ -89,5 +98,4 @@ title: "ML Notes"
     {% endfor %}
   </section>
   {% endif %}
-
 </article>
