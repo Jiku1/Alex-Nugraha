@@ -7,7 +7,7 @@ title: Tentang Saya
 
   <!-- FOTO PROFIL -->
   <div class="about-photo">
-    <img src="{{ '/assets/images/alex.jpg' | relative_url }}" alt="Alex Nugraha Setia">
+    <img src="{{ '/assets/img/alex.jpg' | relative_url }}" alt="Alex Nugraha Setia">
   </div>
 
   <!-- TEKS ABOUT -->
