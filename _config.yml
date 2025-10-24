@@ -12,3 +12,5 @@ google_analytics: "UA-XXXXXXXXX-X"
 # multilingual config (simple)
 default_lang: id
 languages: ["id","en"]
+url: "https://jiku1.github.io"
+baseurl: "/Alex-Nugraha"
