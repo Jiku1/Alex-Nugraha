@@ -3,16 +3,14 @@ layout: default
 title: Blog
 ---
 
-<div class="content">
-  <h1>Blog</h1>
+<h1>📚 Blog & Catatan Riset</h1>
 
-  <ul class="blog-list">
-    {% for post in site.posts %}
-      <li class="blog-card">
-        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-        <p><small>{{ post.date | date: "%d %B %Y" }}</small></p>
-        <p>{{ post.description }}</p>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
+<ul class="blog-list">
+  {% for post in site.posts %}
+  <li class="blog-card">
+    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+    <p><small>{{ post.date | date: "%d %B %Y" }}</small></p>
+    <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+  </li>
+  {% endfor %}
+</ul>
