@@ -2,7 +2,7 @@
 layout: post
 title: "ML Notes: Review AlexNet & Pelatihan Python"
 author: "Alex Nugraha"
-date: 2025-10-25 10:00:00 +0700
+date: 2025-10-24 10:00:00 +0700
 description: "Review arsitektur AlexNet, pelatihan CNN dengan Python, serta hasil grafik accuracy & loss training."
 tags: ["Deep Learning", "CNN", "AlexNet", "Machine Learning"]
 ---

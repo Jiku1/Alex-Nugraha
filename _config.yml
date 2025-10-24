@@ -2,16 +2,29 @@ title: "Alex Nugraha Setia"
 description: "Personal academic portfolio — M.Sc. student site"
 theme: null
 markdown: kramdown
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-paginate
-# Google Analytics placeholder - replace with your measurement id or remove
+
 google_analytics: "UA-XXXXXXXXX-X"
 
 # multilingual config (simple)
 default_lang: id
 languages: ["id","en"]
-url: "https://jiku1.github.io"
+
+# URL konfigurasi yang benar
 url: "https://jiku1.github.io"
 baseurl: "/Alex-Nugraha"
+
+# agar post tanggal masa depan tetap muncul
+future: true
+
+# pastikan posts di-render sebagai halaman
+collections:
+  posts:
+    output: true
+
+paginate: 5
+paginate_path: "/blog/page:num"
