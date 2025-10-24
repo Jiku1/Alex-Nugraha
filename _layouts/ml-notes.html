@@ -8,10 +8,55 @@ title: "ML Notes"
   <p><strong>Ditulis oleh:</strong> {{ site.data.ml-notes.author }}</p>
   <p><em>{{ site.data.ml-notes.date }}</em></p>
 
+  <!-- Intro -->
   <section id="intro">
     <p>{{ site.data.ml-notes.intro }}</p>
   </section>
 
+  <!-- Review AlexNet -->
+  {% if site.data.ml-notes.review_alexnet %}
+  <section id="review-alexnet">
+    <h2>Review AlexNet</h2>
+    <p>{{ site.data.ml-notes.review_alexnet.content }}</p>
+
+    <h3>Arsitektur & Komponen</h3>
+    <ul>
+      {% for item in site.data.ml-notes.review_alexnet.architecture %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+
+    <h3>Kelebihan</h3>
+    <ul>
+      {% for item in site.data.ml-notes.review_alexnet.advantages %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+
+    <h3>Kekurangan</h3>
+    <ul>
+      {% for item in site.data.ml-notes.review_alexnet.disadvantages %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+
+    <h3>Aplikasi</h3>
+    <ul>
+      {% for item in site.data.ml-notes.review_alexnet.applications %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+
+    <h3>Referensi</h3>
+    <ol>
+      {% for item in site.data.ml-notes.review_alexnet.references %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ol>
+  </section>
+  {% endif %}
+
+  <!-- Sections lainnya dari YAML -->
   {% for section in site.data.ml-notes.sections %}
   <section>
     <h2>{{ section.heading }}</h2>
@@ -23,6 +68,7 @@ title: "ML Notes"
   </section>
   {% endfor %}
 
+  <!-- Visualisasi -->
   {% if site.data.ml-notes.visuals %}
   <section id="visuals">
     <h2>Visualisasi Hasil</h2>
@@ -33,6 +79,7 @@ title: "ML Notes"
   </section>
   {% endif %}
 
+  <!-- Kode -->
   {% if site.data.ml-notes.code_examples %}
   <section id="code">
     <h2>Kode & Contoh</h2>
@@ -42,4 +89,5 @@ title: "ML Notes"
     {% endfor %}
   </section>
   {% endif %}
+
 </article>

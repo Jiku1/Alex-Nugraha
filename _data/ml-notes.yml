@@ -5,13 +5,44 @@ date: "24 Oktober 2025"
 intro: >
   Catatan ini membahas AlexNet, pelatihan model Python, serta menampilkan grafik hasil training (accuracy & loss).
 
-sections:
-  - heading: "Review AlexNet"
-    points:
-      - "AlexNet adalah CNN terkenal (2012) dengan 8 lapisan."
-      - "Menggunakan ReLU, dropout, dan data augmentation."
-      - "Mengalahkan metode sebelumnya di ImageNet 2012."
+review_alexnet:
+  content: >
+    AlexNet adalah salah satu arsitektur Convolutional Neural Network (CNN) paling berpengaruh dalam sejarah deep learning. 
+    Diperkenalkan oleh Alex Krizhevsky, Ilya Sutskever, dan Geoffrey Hinton pada tahun 2012 dalam paper *ImageNet Classification with Deep Convolutional Neural Networks*, 
+    AlexNet memenangkan kompetisi ImageNet Large Scale Visual Recognition Challenge (ILSVRC) 2012 dengan margin yang signifikan dibandingkan metode sebelumnya.
 
+  architecture: 
+    - "AlexNet terdiri dari 8 lapisan utama: 5 convolutional layer diikuti oleh 3 fully connected layer."
+    - "Lapisan convolutional pertama menggunakan filter 11x11 dengan stride 4 untuk fitur kasar."
+    - "Lapisan berikutnya menggunakan filter lebih kecil (5x5 & 3x3) untuk fitur halus."
+    - "ReLU activation function mempercepat konvergensi dan mengurangi vanishing gradient."
+    - "Dropout untuk mencegah overfitting."
+    - "Data augmentation: rotasi, flipping, pergeseran gambar."
+    - "Local Response Normalization (LRN) membantu generalisasi."
+
+  advantages:
+    - "Terbukti efektif: menurunkan top-5 error ImageNet 2012 dari ~26% ke ~15%."
+    - "Meningkatkan popularitas CNN dan deep learning."
+    - "Menjadi dasar arsitektur modern seperti VGG, ResNet, DenseNet."
+
+  disadvantages:
+    - "Banyak parameter (~60 juta) → butuh GPU."
+    - "Belum ada batch normalization → training sensitif learning rate."
+    - "LRN kurang efektif dibanding batch norm."
+
+  applications:
+    - "Deteksi objek"
+    - "Segmentasi gambar"
+    - "Analisis medis (MRI/X-ray)"
+    - "Smart City & IoT (pengawasan, pengenalan wajah, deteksi kendaraan)"
+
+  references:
+    - "Krizhevsky, A., Sutskever, I., & Hinton, G. E. (2012). ImageNet Classification with Deep Convolutional Neural Networks. NeurIPS."
+    - "Goodfellow, I., Bengio, Y., & Courville, A. (2016). Deep Learning. MIT Press."
+    - "LeCun, Y., Bengio, Y., & Hinton, G. (2015). Deep learning. Nature, 521(7553), 436–444."
+    - "Simonyan, K., & Zisserman, A. (2015). Very Deep Convolutional Networks for Large-Scale Image Recognition. arXiv:1409.1556"
+
+sections:
   - heading: "Pelatihan Model Python"
     points:
       - "Library: TensorFlow/Keras, matplotlib, numpy."
