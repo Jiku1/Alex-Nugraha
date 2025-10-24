@@ -10,3 +10,4 @@ title: Blog
     <li><a href="{{ post.url }}">{{ post.title }}</a> — <small>{{ post.date | date: "%Y-%m-%d" }}</small></li>
   {% endfor %}
 </ul>
+<p>Total posts: {{ site.posts | size }}</p>
