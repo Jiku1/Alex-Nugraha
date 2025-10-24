@@ -1,4 +1,12 @@
-# Review Lengkap Arsitektur AlexNet
+---
+layout: post
+title: "ML Notes: Review Mendalam Arsitektur AlexNet & Implementasi CNN dengan Python"
+author: "Alex Nugraha"
+date: 2025-10-22 10:00:00 +0700
+description: "Kajian lengkap arsitektur AlexNet, implementasi CNN dengan Python, penjelasan kode, hasil training, dan referensi riset terkini."
+tags: ["Deep Learning", "CNN", "AlexNet", "Machine Learning", "Python"]
+---
+
 
 ## 1. Pendahuluan
 
