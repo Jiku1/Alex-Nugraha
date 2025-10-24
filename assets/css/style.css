@@ -25,6 +25,18 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font-fami
 .wrap{display:flex;justify-content:center}
 .content{width:100%;max-width:var(--max-w);margin:2rem;padding:1.25rem;background:var(--card-bg);border:1px solid var(--border);border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.03);box-sizing:border-box}
 
+/* ====== Content Area ====== */
+.content {
+  max-width: 960px;     /* samakan dengan header/footer */
+  margin: 0 auto;       /* ini bikin posisi horizontal di tengah */
+  padding: 2rem 1rem;   /* jarak biar lega */
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+  text-align: left;     /* pastikan isi tetap rata kiri */
+}
+
 /* Home hero */
 .home-hero{text-align:center;padding:2rem;border-radius:10px;background:linear-gradient(180deg, rgba(37,99,235,0.06), rgba(255,255,255,0));}
 .home-hero h1{color:var(--accent);margin:0 0 0.5rem}
