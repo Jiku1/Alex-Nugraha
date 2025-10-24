@@ -1,5 +1,5 @@
 ---
-layout:post
+layout: post
 title: "ML Notes: Review AlexNet & Pelatihan Python"
 author: "Alex Nugraha"
 date: "2025-10-25"
