@@ -2,11 +2,12 @@
 layout: post
 title: "ML Notes: Review Mendalam Arsitektur AlexNet"
 author: "Alex Nugraha"
-date: 2025-10-22 10:00:00 +0700
+date: 2025-10-25 10:00:00 +0700
 description: "Kajian lengkap arsitektur AlexNet."
 tags: ["Deep Learning", "CNN", "AlexNet", "Machine Learning", "Python"]
 ---
 
+# Arsitektur AlexNet
 
 ## 1. Pendahuluan
 
