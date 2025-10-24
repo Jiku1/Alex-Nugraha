@@ -100,29 +100,49 @@ h1, h2, h3 {
 }
 
 /*about */
-.about-container {
+.about-container-modern {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 3rem auto;
   gap: 2rem;
-  max-width: 960px;
-  margin: 2rem auto;
-  flex-wrap: nowrap; /* pastikan tetap horizontal */
-  align-items: flex-start;
+  font-family: "Inter", sans-serif;
 }
 
 .about-photo img {
   width: 200px;
+  border-radius: 50%;
+  border: 3px solid var(--accent);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.about-intro {
+  text-align: center;
+  background: linear-gradient(90deg, #f7f8fa, #ffffff);
+  padding: 1rem 2rem;
   border-radius: 12px;
-  border: 2px solid var(--border);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-.about-text {
-  flex: 1;
-  line-height: 1.6;
+.about-section {
+  width: 100%;
+  background: var(--card-bg);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-top: 1rem;
 }
 
-.about-text h1, .about-text h2 {
+.about-section h2 {
   color: var(--accent);
+  margin-bottom: 0.5rem;
 }
+
+.about-section ul {
+  padding-left: 1.5rem;
+}
+
 
 @media (max-width: 768px) {
   .about-container {
