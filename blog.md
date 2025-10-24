@@ -10,7 +10,7 @@ title: Blog
   <!-- Link ke Review AlexNet -->
   {% if site.data.ml-notes.review_alexnet %}
     <li>
-      <a href="/ml-notes#review-alexnet">Review AlexNet</a>
+      <a href="/ml-notes/#review-alexnet">Review AlexNet</a>
     </li>
   {% endif %}
 
