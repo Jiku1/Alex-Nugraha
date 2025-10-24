@@ -1,0 +1,29 @@
+title: "ML Notes: Review AlexNet & Pelatihan Python"
+author: "Alex Nugraha"
+date: "24 Oktober 2025"
+
+intro: >
+  Catatan ini membahas AlexNet, pelatihan model Python, serta menampilkan grafik hasil training (accuracy & loss).
+
+sections:
+  - heading: "Review AlexNet"
+    points:
+      - "AlexNet adalah CNN terkenal (2012) dengan 8 lapisan."
+      - "Menggunakan ReLU, dropout, dan data augmentation."
+      - "Mengalahkan metode sebelumnya di ImageNet 2012."
+
+  - heading: "Pelatihan Model Python"
+    points:
+      - "Library: TensorFlow/Keras, matplotlib, numpy."
+      - "Dataset: CIFAR-10."
+      - "Training model dengan model.fit(), monitoring accuracy & loss."
+
+visuals:
+  - description: "Grafik Accuracy Training vs Validation"
+    file: "assets/images/accuracy_plot.png"
+  - description: "Grafik Loss Training vs Validation"
+    file: "assets/images/loss_plot.png"
+
+code_examples:
+  - description: "Kode Pelatihan AlexNet"
+    file: "assets/code/train_alexnet.py"
