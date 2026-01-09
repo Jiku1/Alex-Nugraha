@@ -17,7 +17,7 @@ title: Tentang Saya
 
   <div class="about-section">
     <h2>🎓 Latar Belakang Akademik</h2>
-    <p><strong>Magister Data Teknik Informatika</strong>, Universitas Pamulang (2024–sekarang)<br>
+    <p><strong>Magister Teknik Informatika</strong>, Universitas Pamulang (2024–sekarang)<br>
     Fokus pada pengembangan model kecerdasan buatan dan penerapan data analytics di bidang sosial dan industri.</p>
   </div>
 
